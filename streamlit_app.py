@@ -1,13 +1,13 @@
-import streamlit
-import pandas
+import st as st
+import pn as pn
 
-streamlit.title("My Girlfriend's new Health Diner")
-streamlit.header('Breakfast Menu')
-streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
-streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
-streamlit.text('🥑🍞 Hard-Boiled Free-Range Egg')
-streamlit.title('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+st.title("My Girlfriend's new Health Diner")
+st.header('Breakfast Menu')
+st.text('🥣 Omega 3 & Blueberry Oatmeal')
+st.text('🥗 Kale, Spinach & Rocket Smoothie')
+st.text('🥑🍞 Hard-Boiled Free-Range Egg')
+st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+my_fruit_list = pn.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
-streamlit.dataframe(my_fruit_list)
+st.dataframe(my_fruit_list)
